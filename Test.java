@@ -58,6 +58,11 @@ public class Test {
                 System.out.println(tmpParkingspace.getCar().getRegNr() + " " + tmpParkingspace.getCar().getBrandName());
             }
         }
+
+        for(Parkingspace tmpParkingspace : park.findParkingspacesForCar("ABC123")) {
+            System.out.println(tmpParkingspace.getNbr());
+        }
+
     }
 
 }

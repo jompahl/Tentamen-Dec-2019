@@ -46,8 +46,10 @@ public class Parking {
         ArrayList<Parkingspace> parkingsForCar = new ArrayList<>();
 
         for(Parkingspace tmpParkingspace : parkings) {
-            if(tmpParkingspace.getCar().getRegNr().equals(regNbr)) {
-                parkingsForCar.add(tmpParkingspace);
+            if(tmpParkingspace.getCar() != null) {
+                if(tmpParkingspace.getCar().getRegNr().equals(regNbr)) {
+                    parkingsForCar.add(tmpParkingspace);
+                }
             }
         }
         return parkingsForCar;
